@@ -1,0 +1,51 @@
+{
+  "name": "cat-md",
+  "version": "0.1.0",
+  "description": "catmd: cat for markdown, upgraded — renders mermaid fences as inline terminal images (kitty graphics protocol: Ghostty, kitty)",
+  "keywords": [
+    "markdown",
+    "cat",
+    "terminal",
+    "mermaid",
+    "kitty-graphics",
+    "ghostty",
+    "kitty",
+    "diagram",
+    "cli"
+  ],
+  "license": "MIT",
+  "author": "Sam Dawson",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Verano-20/catmd.git"
+  },
+  "homepage": "https://github.com/Verano-20/catmd#readme",
+  "bugs": "https://github.com/Verano-20/catmd/issues",
+  "type": "module",
+  "bin": {
+    "catmd": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "build": "tsup && chmod +x dist/cli.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run test/unit",
+    "test:integration": "npm run build && vitest run test/integration",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "dependencies": {
+    "@mermaid-js/mermaid-cli": "^11.17.0",
+    "puppeteer": "^25.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^4.1.11"
+  }
+}
