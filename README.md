@@ -9,14 +9,15 @@ inline, in place of the fence source.
 ![catmd rendering demo/demo.md: a typed command followed by the document with its mermaid diagrams shown as images](https://raw.githubusercontent.com/Verano-20/catmd/main/demo/demo.gif)
 
 ```
-npm install -g cat-md
+npm install -g @verano-20/cat-md
 ```
 
 ```
 catmd DESIGN.md
 ```
 
-(The npm package is `cat-md`; the command it installs is `catmd`.)
+(The npm package is scoped — `catmd` was squatted years ago — but the command
+it installs is plain `catmd`.)
 
 ## Why
 

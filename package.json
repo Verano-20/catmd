@@ -1,5 +1,8 @@
 {
-  "name": "cat-md",
+  "name": "@verano-20/cat-md",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.1.0",
   "description": "catmd: cat for markdown, upgraded — renders mermaid fences as inline terminal images (kitty graphics protocol: Ghostty, kitty)",
   "keywords": [
